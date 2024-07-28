@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="tr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
+    <title>Components</title>
 
     <script type="module" src="/build/mily.esm.js"></script>
     <script nomodule src="/build/mily.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+
+  <header-component
+    logo="https://www.inkatescil.com.tr/templates/inkatescil/assets/img/logo.png"
+    menu-items='[{"link": "/", "name": "Home"}, {"link": "/about", "name": "About"}, {"link": "/contact", "name": "Contact"}]'
+    right-section-items='[{"link": "/login", "name": "Giriş Yap"}, {"link": "/signup", "name": "Kayıt Ol"}]'>
+  </header-component>
+
+  <header2-component
+    logo="2. header"
+    menu-items='[{"link": "/", "name": "Home"}, {"link": "/about", "name": "About"}, {"link": "/contact", "name": "Contact"}]'
+    right-section-items='[{"link": "/login", "name": "Login"}, {"link": "/signup", "name": "Sign Up"}]'>
+  </header2-component>
+
   </body>
 </html>

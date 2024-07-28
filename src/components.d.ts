@@ -6,56 +6,57 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface HeaderComponent {
+        "logo": string;
+        "menuItems": string;
+        "rightSectionItems": string;
+    }
+    interface Header2Component {
+        "logo": string;
+        "menuItems": string;
+        "rightSectionItems": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLHeaderComponentElement extends Components.HeaderComponent, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLHeaderComponentElement: {
+        prototype: HTMLHeaderComponentElement;
+        new (): HTMLHeaderComponentElement;
+    };
+    interface HTMLHeader2ComponentElement extends Components.Header2Component, HTMLStencilElement {
+    }
+    var HTMLHeader2ComponentElement: {
+        prototype: HTMLHeader2ComponentElement;
+        new (): HTMLHeader2ComponentElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "header-component": HTMLHeaderComponentElement;
+        "header2-component": HTMLHeader2ComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface HeaderComponent {
+        "logo"?: string;
+        "menuItems"?: string;
+        "rightSectionItems"?: string;
+    }
+    interface Header2Component {
+        "logo"?: string;
+        "menuItems"?: string;
+        "rightSectionItems"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "header-component": HeaderComponent;
+        "header2-component": Header2Component;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
+            "header2-component": LocalJSX.Header2Component & JSXBase.HTMLAttributes<HTMLHeader2ComponentElement>;
         }
     }
 }
