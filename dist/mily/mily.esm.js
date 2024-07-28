@@ -1,0 +1,2 @@
+import{p as e,b as t}from"./p-60dab0f7.js";export{s as setNonce}from"./p-60dab0f7.js";import{g as m}from"./p-e1255160.js";var n=()=>{const t=import.meta.url;const m={};if(t!==""){m.resourcesUrl=new URL(".",t).href}return e(m)};n().then((async e=>{await m();return t([["p-c0762075",[[1,"header-component",{logo:[1],menuItems:[1,"menu-items"],rightSectionItems:[1,"right-section-items"],menuOpen:[32]}],[1,"header2-component",{logo:[1],menuItems:[1,"menu-items"],rightSectionItems:[1,"right-section-items"],menuOpen:[32]}]]]],e)}));
+//# sourceMappingURL=mily.esm.js.map
